@@ -174,7 +174,7 @@ async function generateQRCanvas(id, nameCN, nameEN, team, room) {
   // QR — centered, upper-middle
   const qrSize = 210;
   const qrX = (W - qrSize) / 2;
-  const qrY = H * 0.35;
+  const qrY = H * 0.50;
 
   // White QR bg
   ctx.fillStyle = '#ffffff';
@@ -210,12 +210,12 @@ async function generateQRCanvas(id, nameCN, nameEN, team, room) {
   // Team
   ctx.fillStyle = '#c8a96e';
   ctx.font = '600 12px "KaiTi", sans-serif';
-  ctx.fillText(team, W / 2, textStart + 46);
+  ctx.fillText(team, W / 2, textStart + 35);
 
   // Room
   ctx.fillStyle = 'rgba(200,169,110,0.6)';
   ctx.font = '12px Montserrat, sans-serif';
-  ctx.fillText(`房号 ${room||'-'}`, W / 2, textStart + 64);
+  ctx.fillText(`房号 ${room||'-'}`, W / 2, textStart + 55);
 
   // ID
   ctx.fillStyle = 'rgba(200,169,110,0.4)';
