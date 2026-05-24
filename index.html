@@ -180,7 +180,7 @@ async function generateQRCanvas(id, nameCN, nameEN, team, room) {
 
   const qrSize = 210;
   const qrX = (W - qrSize) / 2;
-  const qrY = H * 0.28;
+  const qrY = H * 0.38;
 
   ctx.fillStyle = '#ffffff';
   ctx.beginPath();
@@ -198,8 +198,8 @@ async function generateQRCanvas(id, nameCN, nameEN, team, room) {
   ctx.stroke();
 
   // --- Same-line name: KaiTi (CN) + Montserrat (EN) ---
-  const cnFontSize = 20;
-  const enFontSize = 12;
+  const cnFontSize = 18;
+  const enFontSize = 15;
   const nameY = textStart + 8;
   const gap = 10;
 
@@ -225,18 +225,18 @@ async function generateQRCanvas(id, nameCN, nameEN, team, room) {
 
   // Team
   ctx.fillStyle = '#c8a96e';
-  ctx.font = '600 11px Montserrat, sans-serif';
+  ctx.font = '600 14px KaiTi, sans-serif';
   ctx.textAlign = 'center';
   ctx.fillText(team, W / 2, textStart + 30);
 
   // Room
   ctx.fillStyle = 'rgba(200,169,110,0.6)';
-  ctx.font = '11px Montserrat, sans-serif';
+  ctx.font = '12px Montserrat, sans-serif';
   ctx.fillText(`房号 ${room||'-'}`, W / 2, textStart + 48);
 
   // ID
   ctx.fillStyle = 'rgba(200,169,110,0.4)';
-  ctx.font = '9px Montserrat, sans-serif';
+  ctx.font = '10px Montserrat, sans-serif';
   ctx.fillText(`ID: ${id}`, W / 2, textStart + 64);
 
   ctx.fillStyle = 'rgba(240,230,211,0.22)';
